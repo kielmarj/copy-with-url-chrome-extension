@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy with URL Extension Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 500px;
+            line-height: 1.6;
+            background-color: #121212;
+            /* Dark background */
+            color: #e0e0e0;
+            /* Light gray text for contrast */
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #ffffff;
+            /* White labels for better visibility */
+        }
+
+        input,
+        select {
+            width: 80%;
+            /* Adjust width to make the field smaller */
+            max-width: 300px;
+            /* Limit the max width */
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding: 8px;
+            /* Reduced padding for a more compact size */
+            font-size: 1em;
+            border: 1px solid #333;
+            /* Dark border */
+            border-radius: 5px;
+            background-color: #333;
+            /* Dark background for inputs */
+            color: #e0e0e0;
+            /* Light text */
+        }
+
+        input::placeholder {
+            color: #b0b0b0;
+            /* Light gray placeholder text */
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 15px;
+            /* Adjusted padding to make it look balanced */
+            font-size: 1em;
+            font-weight: bold;
+            background-color: #1e88e5;
+            /* Blue button color */
+            color: #ffffff;
+            /* White text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+            /* Darker blue on hover */
+        }
+
+        button:focus {
+            outline: 2px dashed #1e88e5;
+        }
+
+        #status {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #00c853;
+            /* Green color for success message */
+        }
+
+        #status.error {
+            color: #ff5252;
+            /* Red color for error message */
+        }
+
+        #form-container {
+            background: #1d1d1d;
+            /* Slightly lighter dark background */
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            /* Dark border to distinguish form container */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Copy with URL Extension Options</h1>
+
+    <div id="form-container">
+        <form>
+            <label for="prefix">Optional text to include before the URL:</label>
+            <input type="text" id="prefix" placeholder="Source: " />
+
+            <label for="format">Select format:</label>
+            <select id="format">
+                <option value="text">Plain Text</option>
+                <option value="html">HTML</option>
+                <option value="markdown">Markdown</option>
+            </select>
+
+            <button id="save" type="button">Save</button>
+        </form>
+
+        <div id="status" aria-live="polite"></div>
+    </div>
+
+    <script src="options.js"></script><br>
+
+    <div align="center">
+        <sub><i>© 2024 <a href="https://github.com/kielmarj">kielmarj</a>, MIT License</i></sub><br>
+        <a href="https://www.buymeacoffee.com/kielmarj" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 36px !important;width: 140 !important;"></a>
+    </div>
+</body>
+
+</html>

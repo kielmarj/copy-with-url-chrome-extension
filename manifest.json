@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Copy with URL",
+    "version": "1.1",
+    "description": "Include a source URL when copying text to clipboard. Use ALT+C or right-click > 'Copy with URL'. The URL will be prepended to the copied selection.",
+    "permissions": [
+        "contextMenus",
+        "scripting",
+        "activeTab",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "commands": {
+        "copy_with_url": {
+            "suggested_key": {
+                "default": "Alt+C"
+            },
+            "description": "Copy URL along with selected text."
+        }
+    },
+    "options_page": "options.html",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
